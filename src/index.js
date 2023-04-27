@@ -7,8 +7,6 @@ import AllRoutines from './routines.js';
 import Login from './login.js';
 import Home from './home.js';
 import Activities from './activities.js';
-import MyRoutines from './my_routines.js';
-
 
 
 
@@ -33,6 +31,7 @@ const App = () => {
         isLoggedIn={isLoggedIn}
         userName={userName}
         setUserName={setUserName}/>}/>
+        <Route path='/my-routines' element={<MyRoutines />}/>
       </Routes>
       <Footer />
     </>
