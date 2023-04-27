@@ -7,6 +7,7 @@ import AllRoutines from './routines.js';
 import Login from './login.js';
 import Home from './home.js';
 import Activities from './activities.js';
+import MyRoutines from './my_routines.js';
 
 
 

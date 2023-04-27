@@ -120,7 +120,7 @@ const newRoutie = async(name, goal, isPublic) => {
           <h3 id="routlabel">New Routine</h3>
           <input type="text" placeholder="New Routine Name..." name="newname" className='routinput' onChange={onChange} required></input>
           <input type="text" placeholder="What's The Goal?" name="newgoal" className='routinput' onChange={onChange} required></input>
-          <label for="pubpriv">Public/Private?</label>
+          <label form="pubpriv">Public/Private?</label>
           <select id='pubpriv' name='newpub' onChange={onChange} required>
             <option value={true}>Select Routine Privacy</option>
             <option value={true}>Public Routine</option>
