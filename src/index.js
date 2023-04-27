@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './header.js';
 import Footer from './footer.js';
 import AllRoutines from './routines.js';
 import Login from './login.js';
 import Home from './home.js';
 import Activities from './activities.js';
-
 
 
 
@@ -26,7 +25,7 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/activities' element={<Activities
         isLoggedIn={isLoggedIn}/>}/>
-        <Route path='/my-routines' />
+        <Route path='/my-routines' element={<MyRoutines />}/>
       </Routes>
       <Footer />
     </>
@@ -36,7 +35,7 @@ const App = () => {
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-    <BrowserRouter>
+    <HashRouter>
         <App />
-    </BrowserRouter>
+    </HashRouter>
 )

@@ -19,7 +19,6 @@ useEffect(() => {
     }
   }
   seeActivities();
-  console.log("ACTIVITIES", activities);
 }, [])
 
 const addActivity = async(name, description) => {
@@ -40,8 +39,8 @@ const addActivity = async(name, description) => {
     console.log("RESPONSE", response);
     window.location.replace('/');
     return response;
-  }catch (err) {
-   console.log(err);
+  } catch (err) {
+    console.log(err);
   }
 }
 const handleSubmit = (e) => {
@@ -60,7 +59,6 @@ const onChange = (e) => {
   } else if (name === 'description') {
     setNewDescriptionName(value);
   }
-  console.log(name, value);
 }
 
  return (

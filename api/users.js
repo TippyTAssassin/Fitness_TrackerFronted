@@ -101,7 +101,9 @@ router.get('/me', async(req, res, next) => {
 // GET /api/users/:username/routines
 router.get('/:username/routines', async(req, res, next) => {
     try {
+        
         const authHeader = req.headers['authorization'];
+        console.log("AUTH", req.headers);
         const token = authHeader.split(' ')[1];
         console.log("HEADERS:", req.headers, "PARAMS:", req.params, "JWTVERY:", jwt.verify(token, JWT_SECRET));
         const { id } = jwt.verify(token, JWT_SECRET);
